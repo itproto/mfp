@@ -1,0 +1,18 @@
+{
+  "name": "mfp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "lerna clean && rm -rf ./node_modules",
+    "start": "lerna run start --parallel",
+    "build": "lerna run build --parallel",
+    "install": "lerna bootstrap"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
