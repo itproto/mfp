@@ -1,5 +1,5 @@
 ---
-to: sample/packages/<%= name.toLowerCase() %>/src/micro-front-app/micro-front-app.js
+to: packages/<%= name.toLowerCase() %>/src/micro-front-app/micro-front-app.js
 ---
 export class MicroFrontApp extends HTMLElement {
     connectedCallback() {

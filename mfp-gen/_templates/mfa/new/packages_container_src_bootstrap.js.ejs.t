@@ -1,5 +1,5 @@
 ---
-to: sample/packages/<%= name.toLowerCase() %>/src/bootstrap.js
+to: packages/<%= name.toLowerCase() %>/src/bootstrap.js
 ---
 import { MicroFrontApp } from './micro-front-app/micro-front-app'
 

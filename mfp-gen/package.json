@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gen:container": "hygen-create --project  config/hygen-shell.json generate"
+    "gen:container": "hygen-create --project  hygen-shell.json generate",
+    "gen:shell": "hygen mfa new shell"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "hygen": "^6.0.4",
-    "hygen-create": "^0.2.1"
+    "hygen-create": "^0.2.1",
+    "lerna": "^4.0.0"
   }
 }

@@ -1,27 +1,29 @@
----
-to: sample/packages/<%= name.toLowerCase() %>/config/webpack.dev.js
----
 const { merge } = require('webpack-merge');
 
-const MFP = require('webpack/lib/<%= name.toLowerCase() %>/ModuleFederationPlugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MFP = require('webpack/lib/container/ModuleFederationPlugin')
 const commonConfig = require('./webpack.common');
 
 const devConfig = {
     mode: 'development',
     devServer: {
-        port: 8080,
+        port: 8081,
         historyApiFallback: {
             index: 'index.html'
         }
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            template: './public/index.html'
+        }),
         new MFP({
-            name: '<%= name.toLowerCase() %>',
-            remotes: {
-                // marketing: 'marketing@http://localhost:8081/remoteEntry.js'
+            name: 'marketing',
+            filename: 'remoteEntry.js',
+            exposes: {
+                './MarketingBoot': './src/bootstrap'
             },
             shared: require('../package.json').dependencies
-        }),
+        })
     ]
 }
 

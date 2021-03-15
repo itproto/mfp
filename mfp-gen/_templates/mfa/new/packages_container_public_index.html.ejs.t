@@ -1,5 +1,5 @@
 ---
-to: sample/packages/<%= name.toLowerCase() %>/public/index.html
+to: packages/<%= name.toLowerCase() %>/public/index.html
 ---
 <!DOCTYPE html>
 

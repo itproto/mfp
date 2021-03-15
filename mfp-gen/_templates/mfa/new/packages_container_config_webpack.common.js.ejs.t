@@ -1,5 +1,5 @@
 ---
-to: sample/packages/<%= name.toLowerCase() %>/config/webpack.common.js
+to: packages/<%= name.toLowerCase() %>/config/webpack.common.js
 ---
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 

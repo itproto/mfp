@@ -1,5 +1,5 @@
 ---
-to: sample/packages/<%= name.toLowerCase() %>/config/webpack.prod.js
+to: packages/<%= name.toLowerCase() %>/config/webpack.prod.js
 ---
 const { merge } = require('webpack-merge');
 const ModuleFederationPlugin = require('webpack/lib/<%= name.toLowerCase() %>/ModuleFederationPlugin');
