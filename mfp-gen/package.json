@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "gen:container": "hygen-create --project  hygen-shell.json generate",
-    "gen:shell": "hygen mfa new shell"
+    "gen:shell": "hygen mfa new shell",
+    "lerna:hoist": "npx lerna clean -y && npx lerna bootstrap --hoist",
+    "lerna:shell": "npx lerna run start --scope=container"
   },
   "keywords": [],
   "author": "",

@@ -1,4 +1,4 @@
-import { MicroFrontApp } from './micro-front-app/micro-front-app'
+import { MicroFrontShell } from './micro-front-app/micro-front-app'
 
 const root = document.querySelector('#root');
-root.appendChild(new MicroFrontApp());
+root.appendChild(new MicroFrontShell());

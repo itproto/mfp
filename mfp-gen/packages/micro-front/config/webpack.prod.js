@@ -7,14 +7,14 @@ const prodConfig = {
     mode: 'production',
     output: {
         filename: '[name].[contenthash].js',
-        publicPath: 'marketing/latest/'
+        publicPath: 'micro-front/latest/'
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: 'marketing',
+            name: 'micro-front',
             filename: 'remoteEntry.js',
             exposes: {
-                './MarketingBoot': './src/bootstrap',
+                './micro-front-boot': './src/bootstrap'
             },
             shared: packageJson.dependencies,
         }),

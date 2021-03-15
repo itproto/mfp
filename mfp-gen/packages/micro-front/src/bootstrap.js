@@ -1,12 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './app/app';
-
 const mount = (el) => {
-    ReactDOM.render(
-        <App />,
-        el
-    )
+    el.innerHTML = `hello micro-front`;
 }
 
 const mountStandalone = (selector) => {
@@ -18,6 +11,6 @@ const mountStandalone = (selector) => {
     }
 }
 
-mountStandalone('#_marketing-dev')
+mountStandalone('#_micro-front-dev')
 
 export { mount }

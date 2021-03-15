@@ -17,10 +17,11 @@ const devConfig = {
             template: './public/index.html'
         }),
         new MFP({
-            name: 'marketing',
+            name: 'microFront', // !!
             filename: 'remoteEntry.js',
             exposes: {
-                './MarketingBoot': './src/bootstrap'
+                './micro-front-boot': './src/bootstrap',
+
             },
             shared: require('../package.json').dependencies
         })
