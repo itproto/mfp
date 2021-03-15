@@ -1,0 +1,22 @@
+{
+  "about": "This is a hygen-create definitions file. The hygen-create utility creates generators that can be executed using hygen.",
+  "hygen_create_version": "0.2.0",
+  "name": "mfa",
+  "files_and_dirs": {
+    "hygen-create.json": false,
+    "packages/container/config/webpack.common.js": true,
+    "packages/container/config/webpack.dev.js": true,
+    "packages/container/config/webpack.prod.js": true,
+    "packages/container/package.json": true,
+    "packages/container/public": true,
+    "packages/container/public/index.html": true,
+    "packages/container/src": true,
+    "packages/container/src/bootstrap.js": true,
+    "packages/container/src/components": true,
+    "packages/container/src/index.js": true,
+    "packages/container/src/micro-front-app": true,
+    "packages/container/src/micro-front-app/micro-front-app.js": true
+  },
+  "templatize_using_name": "container",
+  "gen_parent_dir": false
+}
