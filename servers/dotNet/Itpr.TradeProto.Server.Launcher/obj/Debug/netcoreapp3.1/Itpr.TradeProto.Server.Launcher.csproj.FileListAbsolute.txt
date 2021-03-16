@@ -1,0 +1,13 @@
+C:\ws\mfp\servers\dotNet\Itpr.TradeProto.Server.Launcher\bin\Debug\netcoreapp3.1\Itpr.TradeProto.Server.Launcher.exe
+C:\ws\mfp\servers\dotNet\Itpr.TradeProto.Server.Launcher\bin\Debug\netcoreapp3.1\Itpr.TradeProto.Server.Launcher.deps.json
+C:\ws\mfp\servers\dotNet\Itpr.TradeProto.Server.Launcher\bin\Debug\netcoreapp3.1\Itpr.TradeProto.Server.Launcher.runtimeconfig.json
+C:\ws\mfp\servers\dotNet\Itpr.TradeProto.Server.Launcher\bin\Debug\netcoreapp3.1\Itpr.TradeProto.Server.Launcher.runtimeconfig.dev.json
+C:\ws\mfp\servers\dotNet\Itpr.TradeProto.Server.Launcher\bin\Debug\netcoreapp3.1\Itpr.TradeProto.Server.Launcher.dll
+C:\ws\mfp\servers\dotNet\Itpr.TradeProto.Server.Launcher\bin\Debug\netcoreapp3.1\Itpr.TradeProto.Server.Launcher.pdb
+C:\ws\mfp\servers\dotNet\Itpr.TradeProto.Server.Launcher\obj\Debug\netcoreapp3.1\Itpr.TradeProto.Server.Launcher.csprojAssemblyReference.cache
+C:\ws\mfp\servers\dotNet\Itpr.TradeProto.Server.Launcher\obj\Debug\netcoreapp3.1\Itpr.TradeProto.Server.Launcher.AssemblyInfoInputs.cache
+C:\ws\mfp\servers\dotNet\Itpr.TradeProto.Server.Launcher\obj\Debug\netcoreapp3.1\Itpr.TradeProto.Server.Launcher.AssemblyInfo.cs
+C:\ws\mfp\servers\dotNet\Itpr.TradeProto.Server.Launcher\obj\Debug\netcoreapp3.1\Itpr.TradeProto.Server.Launcher.csproj.CoreCompileInputs.cache
+C:\ws\mfp\servers\dotNet\Itpr.TradeProto.Server.Launcher\obj\Debug\netcoreapp3.1\Itpr.TradeProto.Server.Launcher.dll
+C:\ws\mfp\servers\dotNet\Itpr.TradeProto.Server.Launcher\obj\Debug\netcoreapp3.1\Itpr.TradeProto.Server.Launcher.pdb
+C:\ws\mfp\servers\dotNet\Itpr.TradeProto.Server.Launcher\obj\Debug\netcoreapp3.1\Itpr.TradeProto.Server.Launcher.genruntimeconfig.cache

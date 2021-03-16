@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zwjKtS41M5RUF/bRg35mCsN+obSSpSkYFmiQKALN3O6O7eAwT3LcuMGe9dkrQCw+mFD8t1Rp21Aiyv197YdYzg==",
+  "success": true,
+  "projectFilePath": "C:\\ws\\mfp\\servers\\dotNet\\Itpr.TradeProto.Server.Launcher\\Itpr.TradeProto.Server.Launcher.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ukrai\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
