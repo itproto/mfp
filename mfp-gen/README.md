@@ -34,3 +34,21 @@ How to:
 
 - single-spa lib
 - Frint framework?
+
+## COMMUNICATION
+- https://github.com/chrisdavies/eev message bus
+- window.
+- redux
+- iframes#postMessage
+- via serviceWorker 
+- BroadcastChannel 
+
+
+# FRONTEND proxy
+
+https://learning.oreilly.com/library/view/micro-frontends-in/9781617296871/OEBPS/Text/03.xhtml
+
+PROS
+- Avoids browser security issues (CORS)
+- Enables sharing data like login-state through cookies
+- Better performance (only one DNS lookup, SSL handshake, ...)

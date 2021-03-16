@@ -1,0 +1,18 @@
+{
+  "about": "This is a hygen-create definitions file. The hygen-create utility creates generators that can be executed using hygen.",
+  "hygen_create_version": "0.2.0",
+  "name": "mfas",
+  "files_and_dirs": {
+    "packages/micro-front/config/webpack.common.js": true,
+    "packages/micro-front/config/webpack.dev.js": true,
+    "packages/micro-front/config/webpack.prod.js": true,
+    "packages/micro-front/package.json": true,
+    "packages/micro-front/public": true,
+    "packages/micro-front/public/index.html": true,
+    "packages/micro-front/src": true,
+    "packages/micro-front/src/bootstrap.js": true,
+    "packages/micro-front/src/index.js": true
+  },
+  "templatize_using_name": "micro-front",
+  "gen_parent_dir": false
+}
