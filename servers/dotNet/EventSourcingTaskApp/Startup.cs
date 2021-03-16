@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using EventStore.ClientAPI;
+using EventSourcingTaskApp.Infrastructure;
 
 namespace EventSourcingTaskApp
 {
@@ -25,6 +27,14 @@ namespace EventSourcingTaskApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var eventStoreConnection = EventStoreConnection.Create(
+                connectionString: Configuration.GetValue<string>("EventStore:ConnectionString"),
+                connectionName: Configuration.GetValue<string>("EventStore:ConnetionName"),
+                builder: ConnectionSettings.Create().KeepReconnecting()
+            );
+            eventStoreConnection.ConnectAsync().GetAwaiter().GetResult();
+            services.AddSingleton(eventStoreConnection);
+            services.AddTransient<AggregateRepository>();
             services.AddControllers();
         }
 
