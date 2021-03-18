@@ -1,0 +1,7 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io();
+    socket.on('updatedStock', (msg) => alert(JSON.stringify(msg, null, 2)));
+</script>
+
+</html>
