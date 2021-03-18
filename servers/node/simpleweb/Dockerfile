@@ -13,4 +13,4 @@ RUN npm run build
 
 # ENTRYPOINT ["nodemon", "/usr/src/app/server.js"]
 # Default command
-CMD ["npm", "run", "dev:watch"]
+CMD ["npm", "start"]

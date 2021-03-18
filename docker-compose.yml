@@ -21,6 +21,10 @@ services:
       - '5672:5672'
       - '15674:15674'
       - '15672:15672'
+    volumes:
+      - ./data:/var/lib/rabbitmq
+      - ./data/logs:/var/log/rabbitmq
+    hostname: rabbit
   eventstore:
     image: ${DOCKER_USER}/eventstore:${BUILD_VERSION}
     build:
@@ -34,6 +38,7 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./servers/node/simpleweb
+    command: npm run dev:watch
     environment:
       SIMPLE_WEB_PORT: ${SIMPLE_WEB_PORT}
     ports:
