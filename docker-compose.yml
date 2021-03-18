@@ -29,3 +29,17 @@ services:
     ports:
       - "1113:1113"
       - "2113:2113"
+  simpleweb:
+    image: ${DOCKER_USER}/simpleweb:${BUILD_VERSION}
+    build:
+      dockerfile: Dockerfile
+      context: ./servers/node/simpleweb
+    environment:
+      SIMPLE_WEB_PORT: ${SIMPLE_WEB_PORT}
+    ports:
+      - "${SIMPLE_WEB_PORT}:${SIMPLE_WEB_PORT}"
+    volumes: 
+      - ./servers/node/simpleweb:/usr/app
+      - nodemodules:/usr/app/node_modules
+volumes:
+    nodemodules: {}

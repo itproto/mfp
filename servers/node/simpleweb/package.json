@@ -3,6 +3,8 @@
     "express": "*"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev:watch": "nodemon -L index.js",
+    "build": "echo \"TODO\""
   }
 }
