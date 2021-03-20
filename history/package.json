@@ -1,20 +1,20 @@
 {
-    "name": "@itpr/video-streaming",
+    "name": "@itpr/history",
     "version": "1.0.0",
     "description": "",
     "main": "./src/index.js",
     "scripts": {
         "start": "node ./src/index.js",
-        "start:dev": "nodemon ./src/index.js"
+        "start:dev": "nodemon  -L ./src/index.js"
     },
     "keywords": [],
     "author": "",
     "license": "MIT",
     "dependencies": {
         "dotenv": "^8.2.0",
-        "express": "^4.17.1",
-        "mongodb": "^3.6.5",
         "amqplib": "^0.5.6",
+        "express": "^4.17.1",
+        "mongodb": "^3.3.4",
         "wait-port": "^0.2.6"
     },
     "devDependencies": {
