@@ -21,6 +21,14 @@ services:
     ports:
      - "4001:4001"
     restart: "no"
+  
+  rabbit:
+    image: rabbitmq:3.8.5-management
+    container_name: rabbit
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    restart: always
 
   video-streaming:
     image: video-streaming
@@ -34,6 +42,6 @@ services:
       ./video-streaming/.env
     depends_on:
       - db
-    restart: "no"
+    restart: always
     environment:
       WAIT_HOSTS: db:27017
