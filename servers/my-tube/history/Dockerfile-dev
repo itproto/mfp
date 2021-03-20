@@ -1,0 +1,12 @@
+FROM node:12.18.1-alpine
+
+WORKDIR /usr/src/app
+COPY package*.json ./
+
+#!NO code copy
+
+CMD npm config set cache-min 9999999 && \
+    # faster installs with caching
+    npm install && \ 
+    npx wait-port rabbit:5672 && \
+    npm run start:dev

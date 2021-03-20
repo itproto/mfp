@@ -11,6 +11,8 @@ COPY ./ ./
 
 RUN npm run build 
 
+EXPOSE 3000
+
 # ENTRYPOINT ["nodemon", "/usr/src/app/server.js"]
 # Default command
 CMD ["npm", "start"]
