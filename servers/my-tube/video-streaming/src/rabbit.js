@@ -15,8 +15,11 @@ function connectRabbit() {
 
             return connection.createChannel() // Create a RabbitMQ messaging channel.
                 .then(messageChannel => {
-                    return messageChannel.assertExchange("viewed", "fanout") // Assert that we have a "viewed" exchange.
+                    return messageChannel.assertExchange("viewed", "fanout", { durable: true }) // Assert that we have a "viewed" exchange.
                         .then(() => {
+                            console.log('WAE');
+                            messageChannel.publish("viewed", "", Buffer.from(JSON.stringify({ videoPath: 'test' })));
+                            messageChannel.sendToQueue('Hello', Buffer.from('World'));
                             return messageChannel;
                         });
                 });
