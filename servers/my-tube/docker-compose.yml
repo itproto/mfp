@@ -1,0 +1,39 @@
+version: '3'
+services:
+
+  db:
+    image: mongo:4.2.8
+    container_name: db
+    ports:
+     - "27017:27017"
+    restart: always
+    volumes:
+      - ./data:/data/db
+        
+  azure-storage:
+    image: azure-storage
+    build: 
+      context: ./azure-storage
+      dockerfile: Dockerfile
+    container_name: video-storage
+    env_file: 
+      ./azure-storage/.env
+    ports:
+     - "4001:4001"
+    restart: "no"
+
+  video-streaming:
+    image: video-streaming
+    build: 
+      context: ./video-streaming
+      dockerfile: Dockerfile
+    container_name: video-streaming
+    ports:
+     - "4002:4002"
+    env_file: 
+      ./video-streaming/.env
+    depends_on:
+      - db
+    restart: "no"
+    environment:
+      WAIT_HOSTS: db:27017

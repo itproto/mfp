@@ -6,7 +6,7 @@ WORKDIR /usr/app
 # Install some depenendencies
 COPY ./package.json ./
 RUN npm install -g nodemon
-RUN npm install --silent
+RUN npm install --only=production
 COPY ./ ./
 
 RUN npm run build 
