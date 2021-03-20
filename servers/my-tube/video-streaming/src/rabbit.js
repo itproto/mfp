@@ -17,15 +17,28 @@ function connectRabbit() {
                 .then(messageChannel => {
                     return messageChannel.assertExchange("viewed", "fanout", { durable: true }) // Assert that we have a "viewed" exchange.
                         .then(() => {
-                            console.log('WAE');
-                            messageChannel.publish("viewed", "", Buffer.from(JSON.stringify({ videoPath: 'test' })));
-                            messageChannel.sendToQueue('Hello', Buffer.from('World'));
                             return messageChannel;
                         });
                 });
         });
 }
 
+function sendToExchange(messageChannel, videoPath, exchangeName = 'viewed') {
+    console.log(`Publishing message on "viewed" exchange.${a++}`, videoPath);
+    messageChannel.publish(exchangeName, "", Buffer.from(JSON.stringify({ videoPath })));
+}
+
+let a = 0;
+function sendToQueue(messageChannel, videoPath, queeName = 'viewed') {
+    console.log(`Publishing message on "viewed" queue.`, a++);
+    const msg = { videoPath: videoPath };
+    const jsonMsg = JSON.stringify(msg);
+    messageChannel.publish("", queeName, Buffer.from(jsonMsg)); // Publish message to the "viewed" queue.
+}
+
+
 module.exports = {
-    connectRabbit
+    connectRabbit,
+    sendToExchange,
+    sendToQueue
 };

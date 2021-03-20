@@ -46,14 +46,15 @@ function setupHandlers(app, db, messageChannel) {
             });
     };
 
-    consumeExchangeMessages(messageChannel, 'viewed', consumeViewedMessage);
+    consumeExchangeMessages(messageChannel, consumeViewedMessage);
+    // consumeQueueMessage(messageChannel, consumeViewedMessage);
 
 }
 
 
 const { startHttpServer } = require('./http-server');
 const { connectDb } = require('./mongo');
-const { connectRabbit, consumeExchangeMessages } = require('./rabbit');
+const { connectRabbit, consumeExchangeMessages, consumeQueueMessage } = require('./rabbit');
 function main() {
     return connectDb()
         .then(db => {

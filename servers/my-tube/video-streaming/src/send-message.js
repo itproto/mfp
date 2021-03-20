@@ -22,12 +22,8 @@ const sendViewedMessageDirect = (videoPath) => {
     req.end();
 };
 
-function sendViewedMessageIndirect(messageChannel, videoPath) {
-    console.log(`Publishing message on "viewed" exchange.`, videoPath);
-    messageChannel.publish("viewed", "", Buffer.from(JSON.stringify({ videoPath })));
-}
 
 module.exports = {
-    sendViewedMessageDirect,
-    sendViewedMessageIndirect
-}
+    sendViewedMessageDirect
+
+};

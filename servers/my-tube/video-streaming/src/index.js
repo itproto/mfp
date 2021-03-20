@@ -1,6 +1,8 @@
 const fs = require("fs");
 
 const { sendViewedMessageDirect, sendViewedMessageIndirect } = require('./send-message');
+let count = 0;
+
 function setupHandlers(app, messageChannel) {
     app.get("/video", (req, res) => { // Route for streaming video.
 
@@ -19,15 +21,14 @@ function setupHandlers(app, messageChannel) {
 
             fs.createReadStream(videoPath).pipe(res);
 
-            // sendViewedMessageDirect(videoPath);
-            sendViewedMessageIndirect(messageChannel, videoPath);
+            sendToExchange(messageChannel, videoPath);
         });
     });
 }
 
 
 const { startHttpServer } = require('./http-server');
-const { connectRabbit } = require('./rabbit');
+const { connectRabbit, sendToExchange, sendToQueue } = require('./rabbit');
 
 function main() {
     return connectRabbit()
