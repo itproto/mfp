@@ -10,7 +10,7 @@ const sendViewedMessageDirect = (videoPath) => {
     );
 
     req.on("close", () => {
-        console.log("Sent 'viewed' message to history microservice.");
+        console.log("Sent 'viewed' message to history microservice");
     });
 
     req.on("error", (err) => {
@@ -18,11 +18,12 @@ const sendViewedMessageDirect = (videoPath) => {
         console.error(err && err.stack || err);
     });
 
-    req.end(JSON.stringify({ videoPath }));
+    req.write(JSON.stringify({ videoPath }));
+    req.end();
 };
 
 function sendViewedMessageIndirect(messageChannel, videoPath) {
-    console.log(`Publishing message on "viewed" exchange.`);
+    console.log(`Publishing message on "viewed" exchange.`, videoPath);
     messageChannel.publish("viewed", "", Buffer.from(JSON.stringify({ videoPath })));
 }
 

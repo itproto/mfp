@@ -18,8 +18,9 @@ function setupHandlers(app, messageChannel) {
             });
 
             fs.createReadStream(videoPath).pipe(res);
-            sendViewedMessageDirect(videoPath);
-            // sendViewedMessage(messageChannel, videoPath); 
+
+            // sendViewedMessageDirect(videoPath);
+            sendViewedMessageIndirect(messageChannel, videoPath);
         });
     });
 }
@@ -29,9 +30,9 @@ const { startHttpServer } = require('./http-server');
 const { connectRabbit } = require('./rabbit');
 
 function main() {
-    return connectRabbit()                          // Connect to RabbitMQ...
-        .then(messageChannel => {                   // then...
-            return startHttpServer(messageChannel, setupHandlers); // start the HTTP server.
+    return connectRabbit()
+        .then(messageChannel => {
+            return startHttpServer(messageChannel)(setupHandlers)
         });
 }
 
