@@ -7,7 +7,8 @@
     "clean": "lerna clean && rm -rf ./node_modules",
     "start": "lerna run start --parallel",
     "build": "lerna run build --parallel",
-    "install": "lerna bootstrap"
+    "install": "lerna bootstrap",
+    "up": "docker-compose up --build"
   },
   "keywords": [],
   "author": "",
