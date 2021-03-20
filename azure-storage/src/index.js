@@ -80,6 +80,24 @@ app.get("/video", (req, res) => {
     });
 });
 
+const AWS = require('aws-sdk');
+const s3 = new AWS.S3();
+app.get('/aws-video', (req, res) => {
+    const videoPath = req.query.path;
+    const params = {
+        Bucket: process.env.AWS_TUBE_BUCKET,
+        Key: videoPath
+    };
+    s3.getObject(params)
+        .on('httpHeaders', function (statusCode, headers) {
+            res.set('Content-Length', headers['content-length']);
+            res.set('Content-Type', headers['content-type']);
+            this.response.httpResponse.createUnbufferedStream()
+                .pipe(res);
+        })
+        .send();
+});
+
 //
 // Starts the HTTP server.
 //
