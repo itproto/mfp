@@ -1,2 +1,4 @@
 .env
 data/
+.terraform/
+.terraform.lock.hcl
