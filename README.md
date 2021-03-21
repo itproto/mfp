@@ -3,3 +3,5 @@ https://app.pluralsight.com/course-player?clipId=5186c4a0-906b-40a2-98d5-1e63cc5
 https://learning.oreilly.com/videos/developing-infrastructure-as/9780136608776/?autoplay=false
 
 
+
+https://docs.github.com/en/github/using-git/splitting-a-subfolder-out-into-a-new-repository
