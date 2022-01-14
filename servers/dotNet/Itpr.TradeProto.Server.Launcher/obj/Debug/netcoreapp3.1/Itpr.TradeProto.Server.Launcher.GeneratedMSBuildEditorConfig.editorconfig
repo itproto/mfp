@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Itpr.TradeProto.Server.Launcher
+build_property.ProjectDir = c:\ws\mfp-latest\servers\dotNet\Itpr.TradeProto.Server.Launcher\
